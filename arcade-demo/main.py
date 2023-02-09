@@ -55,14 +55,14 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.ORANGE_PEEL)
+        arcade.set_background_color(arcade.color.RED)
 
     def on_draw(self):
         arcade.start_render()
-        arcade.draw_text("Instructions Screen", WIDTH / 2, HEIGHT / 2,
-                         arcade.color.BLACK, font_size=50, anchor_x="center")
-        arcade.draw_text("Click to advance", WIDTH / 2, HEIGHT / 2 - 75,
-                         arcade.color.GRAY, font_size=20, anchor_x="center")
+        arcade.draw_text("Rajoy Game", WIDTH / 2, HEIGHT / 2,
+                         arcade.color.YELLOW, font_size=50, anchor_x="center")
+        arcade.draw_text("Únete a la aventura", WIDTH / 2, HEIGHT / 2 - 75,
+                         arcade.color.YELLOW, font_size=20, anchor_x="center")
 
     def on_mouse_press(self, _x, _y, _button, _modifiers):
         game_view = GameView()
@@ -90,7 +90,7 @@ class GameView(arcade.View):
         for i in range(5):
 
             # Create the coin instance
-            coin = arcade.Sprite("bandera.png", SPRITE_SCALING / 3)
+            coin = arcade.Sprite("bandera.png", SPRITE_SCALING / 5)
 
             # Position the coin
             coin.center_x = random.randrange(WIDTH)
